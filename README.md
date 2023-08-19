@@ -3,6 +3,7 @@
 Welcome to the 50 Projects in 50 Days challenge! In this challenge, you'll be creating 50 different web projects using HTML, CSS, and JavaScript. Each project is designed to help you improve your front-end development skills, experiment with different techniques, and build a strong foundation in web development.
 
 **How It Works**
+
 Duration: 50 days
 Technologies: HTML, CSS, JavaScript
 
