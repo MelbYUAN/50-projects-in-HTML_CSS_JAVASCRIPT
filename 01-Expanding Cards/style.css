@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    width: 200vw;
+
+}
+
+.panel {
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*the background image will only be displayed once within the element and will not repeat to fill the entire element's area. */
+    border-radius: 50px;
+    background-size: cover;
+    /*make a background image cover the entire width and height*/
+    color:white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+
+
+}
+
+body {
+    align-items: center;
+    /*vertical alignment*/
+    justify-content: center;
+    /*horizontal alignment*/
+    display: flex;
+    font-family: sans-serif;
+    overflow: hidden
+    /*how content that exceeds the dimensions of a container is displayed*/
+}
+
+.panel h3 {
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+
+}
