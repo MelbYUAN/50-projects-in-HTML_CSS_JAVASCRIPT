@@ -1,0 +1,112 @@
+:root {
+  --line-border-fill: rgb(236, 180, 50);
+  --line-border-empty: rgb(223, 221, 221);
+}
+
+body {
+  align-items: center;
+  /*vertical alignment*/
+  justify-content: center;
+  /*horizontal alignment*/
+  display: flex;
+  font-family: sans-serif;
+  background-color: rgb(85, 37, 130);
+
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  font-size: 15px;
+  color: whitesmoke;
+  border: none;
+  margin: 70px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  font-size: 15px;
+  color: whitesmoke;
+  border: none;
+  margin: 70px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 500px;
+  margin-top: 30%;
+  margin-right: 50%;
+}
+
+.circle {
+  background-color: white;
+  color: #908f8f;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid;
+  border-color: #e2e2e2;
+  position: relative;
+}
+
+.circle.active {
+
+  background-color: white;
+  color: #908f8f;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--line-border-fill);
+  position: relative;
+}
+
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 0%;
+  transform: translateY(-50%);
+  height: 4px;
+  z-index: -1;
+  transition: 0.65s ease;
+}
+
+.progress-container::before {
+  content: '';
+  /*The content property is set to an empty string to create the virtual element.*/
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+
+  transform: translateY(-50%);
+  /*Vertically centers the virtual line by translating it up by half of its height*/
+  height: 4px;
+  width: 100%;
+  z-index: -1;/*Sets the stacking order of the virtual line behind other elements in the stacking context.*/
+}
